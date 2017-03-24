@@ -77,7 +77,7 @@ namespace OrangeBricks.Web.Controllers.Property
         public ActionResult MakeOffer(int id)
         {
             var builder = new MakeOfferViewModelBuilder(_context);
-            var viewModel = builder.Build(id);
+            var viewModel = builder.Build(id,User.Identity.GetUserId());
             return View(viewModel);
         }
 
@@ -86,7 +86,7 @@ namespace OrangeBricks.Web.Controllers.Property
         public ActionResult MakeOffer(MakeOfferCommand command)
         {
             var handler = new MakeOfferCommandHandler(_context);
-
+            command.BuyerUserId = User.Identity.GetUserId();
             handler.Handle(command);
 
             return RedirectToAction("Index");

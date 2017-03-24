@@ -12,7 +12,7 @@ namespace OrangeBricks.Web.Controllers.Property.Builders
             _context = context;
         }
 
-        public MakeOfferViewModel Build(int id)
+        public MakeOfferViewModel Build(int id, string buyerUserId)
         {
             var property = _context.Properties.Find(id);
 
@@ -21,7 +21,8 @@ namespace OrangeBricks.Web.Controllers.Property.Builders
                 PropertyId = property.Id,
                 PropertyType = property.PropertyType,
                 StreetName = property.StreetName,
-                Offer = 100000 // TODO: property.SuggestedAskingPrice
+                Offer = 100000, // TODO: property.SuggestedAskingPrice
+                BuyerUserId = buyerUserId
             };
         }
     }

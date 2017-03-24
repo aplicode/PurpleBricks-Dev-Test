@@ -18,6 +18,7 @@ namespace OrangeBricks.Web.Controllers.Offers.Commands
 
             offer.UpdatedAt = DateTime.Now;
             offer.Status = OfferStatus.Accepted;
+            //offer.BuyerUserId = ""; 
 
             _context.SaveChanges();
         }

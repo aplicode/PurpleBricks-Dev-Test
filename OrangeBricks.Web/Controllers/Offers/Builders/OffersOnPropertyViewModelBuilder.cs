@@ -33,7 +33,8 @@ namespace OrangeBricks.Web.Controllers.Offers.Builders
                     Amount = x.Amount,
                     CreatedAt = x.CreatedAt,
                     IsPending = x.Status == OfferStatus.Pending,
-                    Status = x.Status.ToString()
+                    Status = x.Status.ToString(),
+                    BuyerUserId = x.BuyerUserId.ToString()
                 }),
                 PropertyId = property.Id, 
                 PropertyType = property.PropertyType,

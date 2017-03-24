@@ -1,6 +1,6 @@
-namespace OrangeBricks.Web.Controllers.Property.ViewModels
+﻿namespace OrangeBricks.Web.Controllers.Property.ViewModels
 {
-    public class MakeOfferViewModel
+    public class BookAppointmentViewModel
     {
         public string PropertyType { get; set; }
         public string StreetName { get; set; }
