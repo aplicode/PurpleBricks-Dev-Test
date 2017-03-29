@@ -17,5 +17,7 @@ namespace OrangeBricks.Web.Models
         public DateTime UpdatedAt { get; set; }
 
         public string BuyerUserId { get; set; }
+
+        public string AppointmentInfo { get; set; }
     }
 }
